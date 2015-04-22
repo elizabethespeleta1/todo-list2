@@ -7,6 +7,13 @@
 <body>
 	<!-- -->
 	<div class="wrap">
+		<div class="task-list">
+		<ul>
+			<?php require("includes/connect.php");?>
+		</ul>
+		
+		</div>
+
 	</div>
 
 </body>
