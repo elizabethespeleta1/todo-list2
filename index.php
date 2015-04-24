@@ -16,7 +16,6 @@
 		</div>
 	<!-- form  -->
 	<form class="add-new-task" autocomplete="off">
-
 		<input type="text" name="new-task" placeholder="add new iten..."/>
 	</form>
 	</div>
