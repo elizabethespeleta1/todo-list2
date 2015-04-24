@@ -23,14 +23,19 @@
 <script src="http://code.jquery.com/jquery-latest.min.js"> </script>
 <script>
 	add_task();
+	//calling the add task function
 
 	function add_task(){
 		$('.add-new-task').submit(function() {
+
 			var new_task = $('.add-new-task input[name=new-task]').val();
 
+			//getting form submitted
 			if(new_task != ''){
 				$.post('includes/add-new-task.php', { task: new_task}, function(data) {
+					//sending to add-new-task.php file
 					$(('add-new-task input[name=new-task]').val();
+					// then its gonna confirm if you added it through jquery
 					$(data).appendTo('task-list ul').hide().fadeIn();
 				});
 			}
