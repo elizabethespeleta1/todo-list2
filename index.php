@@ -3,6 +3,7 @@
 <head>
 	<title> Simple To-Do List</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+
 </head>
 <body>
 	<!-- how to add items for to-do list -->
@@ -31,7 +32,7 @@
 							//calling the delete button class
 							echo '<li>
 								<span>'.$task_name. '</span>
-								<img id=""'.$task_id'"" class="delete-button" width="10px" src="images/close.png"/>
+								<img id=""'.$task_id.'"" class="delete-button" width="10px" src="images/close.png"/>
 							</li>';
 						}
 					}
@@ -63,7 +64,7 @@
 					//sending to add-new-task.php file
 					$('add-new-task input[name=new-task]').val();
 					// then its gonna confirm if you added it through jquery
-					$(data).appendTo('task-list ul').hide().fadeIn();
+					$(data).appendTo('.task-list ul').hide().fadeIn();
 				});
 			}
 			return false;
@@ -78,7 +79,7 @@
 
 		//getting in post, the id comes from delete-task
 		$.post('includes/delete-task.php', {id: task_id}, function(){
-			//calling the variable ^
+			//calling the vasriable ^
 			current_element.parent().fadeOut("fast", function(){
 				$(this).remove();
 			});
