@@ -15,6 +15,7 @@
 	//actually querying the tasks
 	$query = "SELECT = FROM tasks WHERE task='$task' and date='$date' and time='$time'";
 
+	//if the result is equal to the query
 	if($result = $mysqli->query($query)){
 		while ($row = $result->fetch_assoc()){
 			$task_id = $row['id'];
