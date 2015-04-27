@@ -12,13 +12,18 @@
 			<ul>
 				<!-- getting this file because it needs to connect first -->
 				<?php require("includes/connect.php");
+				//selecting everything from table task from date and time
 				$mysqli = new mysqli('localhost', 'root', 'root', 'todo2');
 				$query = "SELECT * FROM tasks ORDER BY date ASC, time ASC";
 
+				//if result = the query
+				//it makes a new variable
 				if($result = $mysqli->query($query)){
+					// info go to this variable
 					$numrows = $result->num_rows;
 					if($numrows>0){
 						while($row= $result->fetch_assoc()){
+							//variable for certain rows
 							$task_id = $row['id'];
 							$task_name = $row["task"];
 
