@@ -22,11 +22,13 @@
 					// info go to this variable
 					$numrows = $result->num_rows;
 					if($numrows>0){
+						//while this happens fetch_assoc is going to get task
 						while($row= $result->fetch_assoc()){
 							//variable for certain rows
 							$task_id = $row['id'];
 							$task_name = $row["task"];
 
+							//calling the delete button class
 							echo '<li>
 								<span>'.$task_name. '</span>
 								<img id=""'.$task_id'"" class="delete-button" width="10px" src="images/close.png"/>
