@@ -32,9 +32,9 @@
 
 			//getting form submitted
 			if(new_task != ''){
-				$.post('includes/add-new-task.php', { task: new_task}, function(data) {
+				$.post('includes/add-new-task.php', {task: new_task}, function(data) {
 					//sending to add-new-task.php file
-					$(('add-new-task input[name=new-task]').val();
+					$('add-new-task input[name=new-task]').val();
 					// then its gonna confirm if you added it through jquery
 					$(data).appendTo('task-list ul').hide().fadeIn();
 				});
