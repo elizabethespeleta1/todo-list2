@@ -43,11 +43,15 @@
 		});
 	}
 
+	//
 	$('.delete-button').click(function(){
+		//making variables
 		var current_element = $(this);
 		var task_id = $(this).attr('id');
 
+		//getting in post, the id comes from delete-task
 		$.post('includes/delete-task.php', {id: task_id}, function(){
+			//calling the variable ^
 			current_element.parent().fadeOut("fast", function(){
 				$(this).remove();
 			});
