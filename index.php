@@ -1,3 +1,7 @@
+<?php
+	require_once(__DIR__ . "/model/config.php");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,6 +9,17 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 
 </head>
+<header>
+	<button type="button">
+	<a href="<?php echo $path . "register.php"?>">Register</a>
+	</button>
+	<button type="button">
+	<a href="<?php echo $path . "login.php"?>">Login</a>
+	</button>
+	<button type="button">
+	<a href="<?php echo $path . "controller/logout-user.php"?>">Log out</a>
+	</button>
+</header>
 <body>
 	<!-- how to add items for to-do list -->
 	<div class="wrap">
