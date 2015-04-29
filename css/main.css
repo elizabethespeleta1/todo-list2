@@ -7,6 +7,7 @@ body {
 	font: normal 14px 'Open Sans', Arial, sans-serif;
 	color: #999;
 	background-image:url(../images/test2.png);
+	background-repeat: no-repeat;
 }
 
 
@@ -38,8 +39,8 @@ a{
 .wrap{
 	width:400px;
 	margin:0 auto;
-
 }
+
 
 /* styling task list*/
 .task-list{
@@ -53,3 +54,16 @@ a{
 	padding:22px 6% ;
 }
 
+
+/* Attemping to make mobile responsive */
+
+
+@media (max-width:375px ){
+ 
+ html{
+ 	width:100%;
+ 	height:100%;
+ 	background-repeat: no-repeat;
+ }
+
+}
