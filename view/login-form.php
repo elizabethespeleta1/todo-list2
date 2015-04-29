@@ -2,6 +2,9 @@
     require_once(__DIR__ . "/../model/config.php");
 ?>
 
+<html>
+
+<body>
 <h1>Login</h1>
 
 <form method="POST" action="<?php echo $path . "controller/login-user.php"; ?>">
@@ -17,7 +20,9 @@
     
     <div>
         <input type="hidden" name="login" value="login" />
-        <button type="submit">Submit</button>
+        <button class="buhtton" type="submit">Submit</button>
     </div>
 </form>
 
+</body>
+</html>

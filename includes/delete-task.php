@@ -1,5 +1,5 @@
 <?php 
-	$task_id = $strip_tags($_POST['id']);
+	$task_id = strip_tags($_POST['id']);
 	//getting connect file
 	require('connect.php');
 	//logging into localhost

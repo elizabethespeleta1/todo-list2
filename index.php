@@ -7,18 +7,19 @@
 <head>
 	<title> Simple To-Do List</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href='http://fonts.googleapis.com/css?family=Radley:400,400italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width"/>
 
 </head>
-<header>
-	<button type="button">
+<header class="buttonbox">
+	
 	<a href="<?php echo $path . "register.php"?>">Register</a>
-	</button>
-	<button type="button">
+
 	<a href="<?php echo $path . "login.php"?>">Login</a>
-	</button>
-	<button type="button">
+
 	<a href="<?php echo $path . "controller/logout-user.php"?>">Log out</a>
-	</button>
+
 </header>
 <body>
 	<!-- how to add items for to-do list -->
@@ -47,7 +48,7 @@
 							//calling the delete button class
 							echo '<li>
 								<span>'.$task_name. '</span>
-								<img id=""'.$task_id.'"" class="delete-button" width="10px" src="images/close.png"/>
+								<img id=""'.$task_id.'"" class="delete-button" width="10px" src="images/close.svg"/>
 							</li>';
 						}
 					}
@@ -59,7 +60,7 @@
 		</div>
 	<!-- form  -->
 	<form class="add-new-task" autocomplete="off">
-		<input type="text" name="new-task" placeholder="add new iten..."/>
+		<input type="text" name="new-task" placeholder="Add new item..."/>
 	</form>
 	</div>
 </body>

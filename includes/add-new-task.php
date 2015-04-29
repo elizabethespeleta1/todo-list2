@@ -1,7 +1,7 @@
 <?php 
 	//making new variables
 	$task = strip_tags($_POST['task']);
-	$date = $date('Y-m-d');
+	$date = date('Y-m-d');
 	$time = date('H:i:s');
 
 	//connecting to database
@@ -9,7 +9,7 @@
 
 	//putting info in mysqli
 	//then mysqli to put things into the database
-	$mysqli = new mysqli('localhost', 'root', 'root', 'tasks');
+	$mysqli = new mysqli('localhost', 'root', 'root', 'todo2');
 	$mysqli ->query("INSERT INTO tasks VALUES('','$task','$date','$time')");
 
 	//actually querying the tasks
@@ -25,5 +25,5 @@
 
 	$mysqli->close();
 
-	echo '<li><span>'.$task_name.'</span><img id="'.$task_id.'"class="delete-button" width="10px" src="images/close.png.svg" /></li>';
+	echo '<li><span>' . $task_name . '</span><img id="' . $task_id . '"class="delete-button" width="10px" src="images/close.svg"/></li>'; 
 ?>

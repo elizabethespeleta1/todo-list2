@@ -11,7 +11,7 @@
 	}
 	//allow you to know if it works
 	else{
-		echo "connection made";
+		//echo "connection made";
 	}
 	//closing
 	$mysqli->close();
